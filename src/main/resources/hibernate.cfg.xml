@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://studmysql01.fhict.local/dbi410126</property>
+        <property name="hibernate.connection.username">dbi410126</property>
+        <property name="hibernate.connection.password">Vlifvlufui6</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <mapping class="objects.UserDTO" />
+        <mapping class="objects.ExerciseDTO" />
+        <mapping class="objects.SportDTO" />
+        <mapping class="objects.SubscribedSportDTO" />
+        <mapping class="objects.ActivityDTO" />
+    </session-factory>
+</hibernate-configuration>
