@@ -3,20 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="26ff5047-8b1a-4fee-a30c-c8d10b25be35" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/context/ActivityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/ActivityContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/SportContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/SportContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/SubscribedSportContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/SubscribedSportContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportEssentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/ExerciseLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/FitnessLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Sport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/SportLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/UserLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ISportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/ISportLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/sports/FitnessRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/logic/FitnessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/logic/FitnessTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/logic/SportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/logic/SportTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/logic/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/logic/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,6 +200,10 @@
       <workItem from="1587560190984" duration="261000" />
       <workItem from="1588594381857" duration="4791000" />
       <workItem from="1588681151235" duration="866000" />
+      <workItem from="1588749916904" duration="8000" />
+      <workItem from="1588758882868" duration="21000" />
+      <workItem from="1588783103729" duration="811000" />
+      <workItem from="1588795337988" duration="3445000" />
     </task>
     <servers />
   </component>
@@ -226,6 +222,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/firebase/FirebaseAuthenticatedAspect.java</url>
+          <line>20</line>
+          <properties class="firebase.FirebaseAuthenticatedAspect" method="log">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fitbuddy_backend$All_in_fitbuddy_rest.ic" NAME="All in fitbuddy-rest Coverage Results" MODIFIED="1584435308661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

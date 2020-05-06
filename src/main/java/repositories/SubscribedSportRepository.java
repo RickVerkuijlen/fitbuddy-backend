@@ -41,17 +41,11 @@ public class SubscribedSportRepository {
         return result;
     }
 
-    public SubscribedSportDTO subscribeUserToSport(String userUid, int sportId) {
-        SubscribedSportDTO dto = new SubscribedSportDTO();
-        System.out.println(userUid);
-        System.out.println(sportId);
-        dto.setSportId(sportId);
-        dto.setUserUid(userUid);
+    public boolean subscribeUserToSport(SubscribedSportDTO dto) {
+        return subscribedSportContext.create(dto);
+    }
 
-        if(subscribedSportContext.create(dto)) {
-            return dto;
-        } else {
-            return null;
-        }
+    public boolean unsubscribeUserFromSport(SubscribedSportDTO dto) {
+        return subscribedSportContext.delete(dto);
     }
 }

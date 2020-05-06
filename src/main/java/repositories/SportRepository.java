@@ -2,6 +2,7 @@ package repositories;
 
 import context.SportContext;
 import objects.SportDTO;
+import objects.SubscribedSportDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,7 @@
 package controllers.sports;
 
 import objects.SportDTO;
+import objects.SubscribedSportDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -37,4 +38,5 @@ public class SportController {
 
         return new ResponseEntity<>(sportRepository.getAllSports(), HttpStatus.OK);
     }
+
 }

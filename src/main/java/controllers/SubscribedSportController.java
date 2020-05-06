@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import repositories.SubscribedSportRepository;
 
+import javax.websocket.server.PathParam;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -32,14 +33,33 @@ public class SubscribedSportController {
         return new ResponseEntity<>(subscribedSportRepository.getSubscribedSportsFromUserByUid(uid), HttpStatus.OK);
     }
 
-    @PostMapping(consumes = "application/json", produces = "application/json")
+    @FirebaseSecurity
+    @PostMapping(value = "/subscribe", consumes = "application/json", produces = "application/json")
     public HttpEntity<Object> subscribeToSport(@RequestBody SubscribedSportDTO subscribedSportDTO) {
         System.out.println("[" + LocalDateTime.now() + "] subscribeToSport");
 
-        SubscribedSportDTO dto = subscribedSportRepository.subscribeUserToSport(subscribedSportDTO.getUserUid(), subscribedSportDTO.getSportId());
+        boolean subscriptionSuccess = subscribedSportRepository.subscribeUserToSport(subscribedSportDTO);
 
-        if(dto != null) {
+        if(subscriptionSuccess) {
             return new ResponseEntity<>("User subscribed to sport", HttpStatus.ACCEPTED);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+        }
+    }
+
+    @DeleteMapping(value = "/unsubscribe/{userId}/{sportId}")
+    public HttpEntity<Object> unsubscribeFromSport(@PathVariable("userId") String userId,
+                                                   @PathVariable("sportId") int sportId) {
+        System.out.println("[" + LocalDateTime.now() + "] unsubscribeFromSport");
+
+        SubscribedSportDTO dto = new SubscribedSportDTO();
+        dto.setUserUid(userId);
+        dto.setSportId(sportId);
+
+        boolean subscriptionSuccess = subscribedSportRepository.unsubscribeUserFromSport(dto);
+
+        if(subscriptionSuccess) {
+            return new ResponseEntity<>("User unsubscribed from sport", HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
         }

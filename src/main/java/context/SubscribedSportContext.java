@@ -43,4 +43,21 @@ public class SubscribedSportContext {
             return false;
         }
     }
+
+    public boolean delete(SubscribedSportDTO entity) {
+        Transaction transaction = null;
+        try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
+            transaction = session.beginTransaction();
+
+            session.delete(entity);
+
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            if(transaction != null) {
+                transaction.rollback();
+            }
+            return false;
+        }
+    }
 }
