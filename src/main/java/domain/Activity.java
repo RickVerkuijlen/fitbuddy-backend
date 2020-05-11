@@ -1,4 +1,4 @@
-package objects;
+package domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -13,7 +13,7 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "activity")
-public class ActivityDTO extends ResourceSupport implements Serializable {
+public class Activity extends ResourceSupport implements Serializable {
 
     @Id
     @JsonIgnore

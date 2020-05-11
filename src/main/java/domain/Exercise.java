@@ -1,10 +1,10 @@
-package objects;
+package domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class ExerciseDTO {
+public class Exercise {
 
     @Id
     private int id;
@@ -14,7 +14,7 @@ public class ExerciseDTO {
     private double timeInSeconds;
     private double kCalPerMinute;
 
-    public ExerciseDTO() {}
+    public Exercise() {}
 
     public String getDescription() {
         return description;

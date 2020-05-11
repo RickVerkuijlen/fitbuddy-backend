@@ -1,7 +1,7 @@
 package controllers;
 
 import firebase.FirebaseSecurity;
-import objects.UserDTO;
+import domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping(consumes = "application/json", produces = "application/json")
-    public HttpEntity<Boolean> createUser(@RequestBody UserDTO newUser) {
+    public HttpEntity<Boolean> createUser(@RequestBody User newUser) {
         boolean userCreationSuccess = userRepository.createUser(newUser);
 
         if(userCreationSuccess) {
@@ -35,11 +35,11 @@ public class UserController {
 
     @FirebaseSecurity
     @GetMapping(value = "/{uid}", produces = "application/json")
-    public @ResponseBody HttpEntity<UserDTO> getUserByUid(@PathVariable String uid) {
-        UserDTO userDTO = userRepository.getUserByUid(uid);
+    public @ResponseBody HttpEntity<User> getUserByUid(@PathVariable String uid) {
+        User user = userRepository.getUserByUid(uid);
 
-        if(userDTO != null) {
-            return new ResponseEntity<>(userDTO, HttpStatus.OK);
+        if(user != null) {
+            return new ResponseEntity<>(user, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

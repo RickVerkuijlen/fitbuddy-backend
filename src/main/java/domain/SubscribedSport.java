@@ -1,4 +1,4 @@
-package objects;
+package domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.ResourceSupport;
@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "user_sport")
-public class SubscribedSportDTO extends ResourceSupport implements Serializable{
+public class SubscribedSport extends ResourceSupport implements Serializable{
 
     @Id
     @Column(name = "userid")
@@ -20,7 +20,7 @@ public class SubscribedSportDTO extends ResourceSupport implements Serializable{
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private int sportId;
 
-    public SubscribedSportDTO() {}
+    public SubscribedSport() {}
 
     public String getUserUid() {
         return userUid;

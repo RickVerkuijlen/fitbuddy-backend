@@ -1,15 +1,14 @@
-package objects;
+package domain;
 
-import javax.annotation.Nullable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Null;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "sport")
-public class SportDTO {
+public class Sport implements ISportEssentials{
 
     @Id
     @Column(name = "id")
@@ -23,6 +22,10 @@ public class SportDTO {
 
     @Column(name = "description")
     private String description;
+
+    private long sportedTime;
+    private Timestamp startedSport;
+    private boolean isSporting = false;
 
     public String getDescription() {
         return description;
@@ -54,5 +57,32 @@ public class SportDTO {
 
     public void setKcalPerMinute(double kcalPerMinute) {
         this.kcalPerMinute = kcalPerMinute;
+    }
+
+    @Override
+    public final void startSport() {
+        if(!isSporting) {
+            isSporting = true;
+            startedSport = new Timestamp(System.currentTimeMillis());
+            sportedTime = 0;
+        }
+    }
+
+    @Override
+    public final void stopSport() {
+        if(isSporting) {
+            isSporting = false;
+            sportedTime = System.currentTimeMillis() - startedSport.getTime();
+        }
+    }
+
+    @Override
+    public long getSportedTime() {
+        return sportedTime;
+    }
+
+    @Override
+    public boolean isSporting() {
+        return isSporting;
     }
 }

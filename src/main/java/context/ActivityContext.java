@@ -1,7 +1,7 @@
 package context;
 
 import context.interfaces.CrudOperations;
-import objects.ActivityDTO;
+import domain.Activity;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ActivityContext extends CrudOperations<ActivityDTO> {
+public class ActivityContext extends CrudOperations<Activity> {
 
-    public List<ActivityDTO> getAllActivitiesFromUser(String uid) {
-        List<ActivityDTO> result = new ArrayList<>();
+    public List<Activity> getAllActivitiesFromUser(String uid) {
+        List<Activity> result = new ArrayList<>();
         try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
-            Query<ActivityDTO> query = session.createQuery("from ActivityDTO a where a.userId = :user_id order by date desc ", ActivityDTO.class);
+            Query<Activity> query = session.createQuery("from Activity a where a.userId = :user_id order by date desc ", Activity.class);
             query.setParameter("user_id", uid);
             result = query.getResultList();
         } catch (Exception e) {
@@ -25,12 +25,12 @@ public class ActivityContext extends CrudOperations<ActivityDTO> {
         return result;
     }
 
-    public ActivityDTO getActivityById(String id) {
-        ActivityDTO result = null;
+    public Activity getActivityById(String id) {
+        Activity result = null;
         try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
-            Query query = session.createQuery("from ActivityDTO a where a.id = :id", ActivityDTO.class);
+            Query query = session.createQuery("from Activity a where a.id = :id", Activity.class);
             query.setParameter("id", Integer.parseInt(id));
-            result = (ActivityDTO)query.uniqueResult();
+            result = (Activity)query.uniqueResult();
         }
         return result;
     }

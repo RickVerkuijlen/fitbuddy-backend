@@ -1,18 +1,19 @@
 package logic;
 
-import objects.ExerciseDTO;
+import domain.Exercise;
+import domain.Fitness;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FitnessTest {
-    private FitnessLogic fitness;
+    private Fitness fitness;
 
     @BeforeEach
     void setUp() {
-        this.fitness = new FitnessLogic();
-        ExerciseDTO dto = new ExerciseDTO();
+        this.fitness = new Fitness();
+        Exercise dto = new Exercise();
         dto.setkCalPerMinute(150);
         dto.setTimeInSeconds(120);
         this.fitness.createExercise(dto);
@@ -20,7 +21,7 @@ class FitnessTest {
 
     @Test
     public void addExercise_twoExercises() {
-        fitness.createExercise(new ExerciseDTO());
+        fitness.createExercise(new Exercise());
 
         int actual = fitness.getScheme().size();
         int expected = 2;

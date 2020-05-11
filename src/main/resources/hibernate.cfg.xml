@@ -9,10 +9,10 @@
         <property name="hibernate.connection.username">dbi410126</property>
         <property name="hibernate.connection.password">Vlifvlufui6</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <mapping class="objects.UserDTO" />
-        <mapping class="objects.ExerciseDTO" />
-        <mapping class="objects.SportDTO" />
-        <mapping class="objects.SubscribedSportDTO" />
-        <mapping class="objects.ActivityDTO" />
+        <mapping class="domain.User" />
+        <mapping class="domain.Exercise" />
+        <mapping class="domain.Sport" />
+        <mapping class="domain.SubscribedSport" />
+        <mapping class="domain.Activity" />
     </session-factory>
 </hibernate-configuration>

@@ -4,7 +4,7 @@ import context.ActivityContext;
 import controllers.ActivityController;
 import controllers.UserController;
 import controllers.sports.SportController;
-import objects.ActivityDTO;
+import domain.Activity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.stereotype.Component;
@@ -24,9 +24,9 @@ public class ActivityRepository {
         this.activityContext = activityContext;
     }
 
-    public List<ActivityDTO> getAllActivitiesFromUser(String uid) {
-        List<ActivityDTO> result = new ArrayList<>();
-        for (ActivityDTO activity : activityContext.getAllActivitiesFromUser(uid)) {
+    public List<Activity> getAllActivitiesFromUser(String uid) {
+        List<Activity> result = new ArrayList<>();
+        for (Activity activity : activityContext.getAllActivitiesFromUser(uid)) {
 
             setLinks(activity);
 
@@ -35,20 +35,20 @@ public class ActivityRepository {
         return result;
     }
 
-    public ActivityDTO getActivityById(String id) {
-        ActivityDTO activityDTO = activityContext.getActivityById(id);
-        setLinks(activityDTO);
-        return activityDTO;
+    public Activity getActivityById(String id) {
+        Activity activity = activityContext.getActivityById(id);
+        setLinks(activity);
+        return activity;
     }
 
-    public boolean createActivity(ActivityDTO dto) {
+    public boolean createActivity(Activity dto) {
         return activityContext.create(dto);
     }
 
-    private void setLinks(ActivityDTO activityDTO) {
-        Link selfLink = linkTo(methodOn(ActivityController.class).getActivityById(String.valueOf(activityDTO.getActivityId()))).withSelfRel();
-        Link sportLink = linkTo(methodOn(SportController.class).getSportById(String.valueOf(activityDTO.getSportId()))).withRel("sport");
-        Link userLink = linkTo(methodOn(UserController.class).getUserByUid(String.valueOf(activityDTO.getUserId()))).withRel("user");
-        activityDTO.add(selfLink, sportLink, userLink);
+    private void setLinks(Activity activity) {
+        Link selfLink = linkTo(methodOn(ActivityController.class).getActivityById(String.valueOf(activity.getActivityId()))).withSelfRel();
+        Link sportLink = linkTo(methodOn(SportController.class).getSportById(String.valueOf(activity.getSportId()))).withRel("sport");
+        Link userLink = linkTo(methodOn(UserController.class).getUserByUid(String.valueOf(activity.getUserId()))).withRel("user");
+        activity.add(selfLink, sportLink, userLink);
     }
 }

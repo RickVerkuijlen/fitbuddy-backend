@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @Configuration
 @SpringBootApplication
-@ComponentScan(basePackages = {"context", "controllers", "objects", "repositories", "logic", "firebase"})
+@ComponentScan(basePackages = {"context", "controllers", "domain", "repositories", "domain", "firebase"})
 @EnableAspectJAutoProxy
 public class Application {
     public static void main(String[] args) {

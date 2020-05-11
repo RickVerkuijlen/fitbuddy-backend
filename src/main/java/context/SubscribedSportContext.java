@@ -1,7 +1,7 @@
 package context;
 
 import context.interfaces.CrudOperations;
-import objects.SubscribedSportDTO;
+import domain.SubscribedSport;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class SubscribedSportContext extends CrudOperations<SubscribedSportDTO> {
+public class SubscribedSportContext extends CrudOperations<SubscribedSport> {
 
-    public List<SubscribedSportDTO> getSubscribedSportsFromUserByUid(String uid) {
-        List<SubscribedSportDTO> result = new ArrayList<>();
+    public List<SubscribedSport> getSubscribedSportsFromUserByUid(String uid) {
+        List<SubscribedSport> result = new ArrayList<>();
         try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
-            Query<SubscribedSportDTO> query = session.createQuery("from SubscribedSportDTO s where s.userUid = :user_id", SubscribedSportDTO.class);
+            Query<SubscribedSport> query = session.createQuery("from SubscribedSport s where s.userUid = :user_id", SubscribedSport.class);
             query.setParameter("user_id", uid);
             result = query.list();
         } catch (Exception e) {

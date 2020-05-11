@@ -1,4 +1,4 @@
-package objects;
+package domain;
 
 import org.springframework.hateoas.ResourceSupport;
 
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
-public class UserDTO extends ResourceSupport {
+public class User extends ResourceSupport {
 
     @Id
     @Column(name = "uid")
@@ -37,7 +37,7 @@ public class UserDTO extends ResourceSupport {
     private double bmi;
 
 
-    public UserDTO() {
+    public User() {
     }
 
     public String getUid() {

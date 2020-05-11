@@ -1,7 +1,6 @@
 package controllers.sports;
 
-import objects.SportDTO;
-import objects.SubscribedSportDTO;
+import domain.Sport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -26,14 +25,14 @@ public class SportController {
 
     @GetMapping(value = "/{id}", produces = "application/json")
     public @ResponseBody
-    HttpEntity<SportDTO> getSportById(@PathVariable String id) {
+    HttpEntity<Sport> getSportById(@PathVariable String id) {
         System.out.println("[" + LocalDateTime.now() + "] getSportById");
         return new ResponseEntity<>(sportRepository.getSportById(Integer.parseInt(id)), HttpStatus.OK);
     }
 
     @GetMapping(produces = "application/json")
     public @ResponseBody
-    HttpEntity<List<SportDTO>> getAllSports() {
+    HttpEntity<List<Sport>> getAllSports() {
         System.out.println("[" + LocalDateTime.now() + "] getAllSports");
 
         return new ResponseEntity<>(sportRepository.getAllSports(), HttpStatus.OK);

@@ -1,11 +1,10 @@
 package repositories;
 
-import context.SportContext;
 import context.SubscribedSportContext;
 import controllers.SubscribedSportController;
 import controllers.UserController;
 import controllers.sports.SportController;
-import objects.SubscribedSportDTO;
+import domain.SubscribedSport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.stereotype.Component;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Component;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -26,14 +24,14 @@ public class SubscribedSportRepository {
         this.subscribedSportContext = subscribedSportContext;
     }
 
-    public SubscribedSportDTO getSubscribedSportsFromUserByUid(String uid) {
-        List<SubscribedSportDTO> sports = subscribedSportContext.getSubscribedSportsFromUserByUid(uid);
-        SubscribedSportDTO result = new SubscribedSportDTO();
+    public SubscribedSport getSubscribedSportsFromUserByUid(String uid) {
+        List<SubscribedSport> sports = subscribedSportContext.getSubscribedSportsFromUserByUid(uid);
+        SubscribedSport result = new SubscribedSport();
         Link selfLink = linkTo(methodOn(SubscribedSportController.class).getSubscribedSportsFromUserByUid(uid)).withSelfRel();
         Link userLink = linkTo(methodOn(UserController.class).getUserByUid(uid)).withRel("user");
         result.add(selfLink);
         result.add(userLink);
-        for (SubscribedSportDTO sport :
+        for (SubscribedSport sport :
                 sports) {
             Link sportLink = linkTo(methodOn(SportController.class).getSportById(String.valueOf(sport.getSportId()))).withRel("sport");
             result.add(sportLink);
@@ -41,11 +39,11 @@ public class SubscribedSportRepository {
         return result;
     }
 
-    public boolean subscribeUserToSport(SubscribedSportDTO dto) {
+    public boolean subscribeUserToSport(SubscribedSport dto) {
         return subscribedSportContext.create(dto);
     }
 
-    public boolean unsubscribeUserFromSport(SubscribedSportDTO dto) {
+    public boolean unsubscribeUserFromSport(SubscribedSport dto) {
         return subscribedSportContext.delete(dto);
     }
 }

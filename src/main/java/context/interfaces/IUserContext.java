@@ -1,10 +1,10 @@
 package context.interfaces;
 
-import objects.UserDTO;
+import domain.User;
 
 import java.util.List;
 
-public interface IUserContext extends IContext<UserDTO> {
-    List<UserDTO> getAllUsers();
-    UserDTO getUserById(String id);
+public interface IUserContext extends IContext<User> {
+    List<User> getAllUsers();
+    User getUserById(String id);
 }

@@ -2,7 +2,7 @@ package repositories;
 
 import context.interfaces.IUserContext;
 import controllers.SubscribedSportController;
-import objects.UserDTO;
+import domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.stereotype.Component;
@@ -19,16 +19,16 @@ public class UserRepository {
         this.userContext = userContext;
     }
 
-    public boolean createUser(UserDTO userDTO) {
-        return userContext.create(userDTO);
+    public boolean createUser(User user) {
+        return userContext.create(user);
     }
 
-    public UserDTO getUserByUid(String uid) {
-        UserDTO userDTO = userContext.getUserById(uid);
+    public User getUserByUid(String uid) {
+        User user = userContext.getUserById(uid);
 
         Link subscribedSports = linkTo(methodOn(SubscribedSportController.class).getSubscribedSportsFromUserByUid(uid)).withRel("subscribedSports");
-        userDTO.add(subscribedSports);
+        user.add(subscribedSports);
 
-        return userDTO;
+        return user;
     }
 }
