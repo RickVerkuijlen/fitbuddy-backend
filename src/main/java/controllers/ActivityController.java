@@ -1,5 +1,6 @@
 package controllers;
 
+import firebase.FirebaseSecurity;
 import objects.ActivityDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -37,5 +38,20 @@ public class ActivityController {
     HttpEntity<ActivityDTO> getActivityById(@PathVariable String id) {
         System.out.println("[" + LocalDateTime.now() + "] getActivityById");
         return new ResponseEntity<>(activityRepository.getActivityById(id), HttpStatus.OK);
+    }
+
+    @FirebaseSecurity
+    @PostMapping(consumes = "application/json", produces = "application/json")
+    public @ResponseBody
+    HttpEntity<Boolean> postActivity(@RequestBody ActivityDTO dto) {
+        System.out.println("[" + LocalDateTime.now() + "] postActivity");
+        System.out.println(dto);
+        boolean userCreationSuccess = activityRepository.createActivity(dto);
+
+        if(userCreationSuccess) {
+            return new ResponseEntity<>(true, HttpStatus.CREATED);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+        }
     }
 }

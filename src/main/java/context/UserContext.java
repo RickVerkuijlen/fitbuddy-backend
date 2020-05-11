@@ -1,10 +1,9 @@
 package context;
 
+import context.interfaces.CrudOperations;
 import context.interfaces.IUserContext;
 import objects.UserDTO;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import util.HibernateInitialize;
@@ -12,7 +11,7 @@ import util.HibernateInitialize;
 import java.util.List;
 
 @Component
-public class UserContext implements IUserContext {
+public class UserContext extends CrudOperations<UserDTO> implements IUserContext {
     @Override
     public List<UserDTO> getAllUsers() {
         return null;
@@ -27,35 +26,5 @@ public class UserContext implements IUserContext {
             result = (UserDTO)query.uniqueResult();
         }
         return result;
-    }
-
-    @Override
-    public boolean create(UserDTO entity) {
-        Transaction transaction = null;
-        try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
-            transaction = session.beginTransaction();
-
-            session.save(entity);
-
-            transaction.commit();
-
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            if (transaction != null) {
-                transaction.rollback();
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public boolean update(UserDTO entity) {
-        return false;
-    }
-
-    @Override
-    public boolean delete(UserDTO entity) {
-        return false;
     }
 }

@@ -1,5 +1,6 @@
 package context;
 
+import context.interfaces.CrudOperations;
 import objects.ActivityDTO;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ActivityContext {
+public class ActivityContext extends CrudOperations<ActivityDTO> {
 
     public List<ActivityDTO> getAllActivitiesFromUser(String uid) {
         List<ActivityDTO> result = new ArrayList<>();

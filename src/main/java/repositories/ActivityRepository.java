@@ -41,6 +41,10 @@ public class ActivityRepository {
         return activityDTO;
     }
 
+    public boolean createActivity(ActivityDTO dto) {
+        return activityContext.create(dto);
+    }
+
     private void setLinks(ActivityDTO activityDTO) {
         Link selfLink = linkTo(methodOn(ActivityController.class).getActivityById(String.valueOf(activityDTO.getActivityId()))).withSelfRel();
         Link sportLink = linkTo(methodOn(SportController.class).getSportById(String.valueOf(activityDTO.getSportId()))).withRel("sport");

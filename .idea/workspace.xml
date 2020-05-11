@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26ff5047-8b1a-4fee-a30c-c8d10b25be35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/context/interfaces/CrudOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/ActivityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/ActivityContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/context/SportContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/SportContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/context/SubscribedSportContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/SubscribedSportContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/UserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +204,10 @@
       <workItem from="1588749916904" duration="8000" />
       <workItem from="1588758882868" duration="21000" />
       <workItem from="1588783103729" duration="811000" />
-      <workItem from="1588795337988" duration="3445000" />
+      <workItem from="1588795337988" duration="3662000" />
+      <workItem from="1588799398771" duration="54000" />
+      <workItem from="1589066509647" duration="676000" />
+      <workItem from="1589196175756" duration="3528000" />
     </task>
     <servers />
   </component>

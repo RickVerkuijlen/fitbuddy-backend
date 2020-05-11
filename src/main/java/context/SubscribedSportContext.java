@@ -1,18 +1,17 @@
 package context;
 
+import context.interfaces.CrudOperations;
 import objects.SubscribedSportDTO;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import util.HibernateInitialize;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class SubscribedSportContext {
+public class SubscribedSportContext extends CrudOperations<SubscribedSportDTO> {
 
     public List<SubscribedSportDTO> getSubscribedSportsFromUserByUid(String uid) {
         List<SubscribedSportDTO> result = new ArrayList<>();
@@ -26,38 +25,4 @@ public class SubscribedSportContext {
         return result;
     }
 
-    public boolean create(SubscribedSportDTO entity) {
-        Transaction transaction = null;
-        try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
-            transaction = session.beginTransaction();
-
-            session.save(entity);
-
-            transaction.commit();
-
-            return true;
-        } catch (Exception e) {
-            if(transaction != null) {
-                transaction.rollback();
-            }
-            return false;
-        }
-    }
-
-    public boolean delete(SubscribedSportDTO entity) {
-        Transaction transaction = null;
-        try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
-            transaction = session.beginTransaction();
-
-            session.delete(entity);
-
-            transaction.commit();
-            return true;
-        } catch (Exception e) {
-            if(transaction != null) {
-                transaction.rollback();
-            }
-            return false;
-        }
-    }
 }
