@@ -2,6 +2,7 @@ package controllers;
 
 import firebase.FirebaseSecurity;
 import domain.SubscribedSport;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 @RestController
 @RequestMapping("/subscribedsport")
 @CrossOrigin(origins = "http://localhost:4200")
+@Api(tags = "Subscribed Sports Controller", description = "Controller to manage the subscribed sports of an user")
 public class SubscribedSportController {
 
     private SubscribedSportRepository subscribedSportRepository;

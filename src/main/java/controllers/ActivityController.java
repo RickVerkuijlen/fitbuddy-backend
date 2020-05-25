@@ -17,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/activity")
 @CrossOrigin(origins = "http://localhost:4200")
+@Api(tags = "Activity Controller", description = "Controller to manage the users activities with different sports")
 public class ActivityController {
 
     private ActivityRepository activityRepository;
@@ -44,10 +45,10 @@ public class ActivityController {
     @FirebaseSecurity
     @PostMapping(consumes = "application/json", produces = "application/json")
     public @ResponseBody
-    HttpEntity<Boolean> postActivity(@RequestBody Activity dto) {
+    HttpEntity<Boolean> postActivity(@RequestBody Activity activity) {
         System.out.println("[" + LocalDateTime.now() + "] postActivity");
-        System.out.println(dto);
-        boolean userCreationSuccess = activityRepository.createActivity(dto);
+        System.out.println(activity);
+        boolean userCreationSuccess = activityRepository.createActivity(activity);
 
         if(userCreationSuccess) {
             return new ResponseEntity<>(true, HttpStatus.CREATED);

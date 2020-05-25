@@ -1,6 +1,7 @@
 package controllers.sports;
 
 import domain.Sport;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/sport")
 @CrossOrigin(origins = "http://localhost:4200")
+@Api(tags = "Sport Controller", description = "Controller to access all general sports data")
 public class SportController {
 
     private SportRepository sportRepository;

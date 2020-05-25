@@ -2,6 +2,8 @@ package controllers;
 
 import firebase.FirebaseSecurity;
 import domain.User;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.SwaggerDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -13,6 +15,7 @@ import repositories.UserRepository;
 @RestController
 @RequestMapping("/user")
 @CrossOrigin(origins = "http://localhost:4200")
+@Api(tags = "User Controller", description = "Controller to manage users, they can login with Firebase")
 public class UserController {
 
     private UserRepository userRepository;

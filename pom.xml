@@ -17,6 +17,9 @@
     <properties>
         <java.version>11</java.version>
         <jacoco.version>0.8.4</jacoco.version>
+        <sonar.projectKey>RickVerkuijlen_fitbuddy-backend</sonar.projectKey>
+        <sonar.organization>rickverkuijlen</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>

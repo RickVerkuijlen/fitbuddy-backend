@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26ff5047-8b1a-4fee-a30c-c8d10b25be35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +219,7 @@
       <workItem from="1589802308043" duration="1955000" />
       <workItem from="1589874766179" duration="10000" />
       <workItem from="1589875435525" duration="85000" />
-      <workItem from="1590405589635" duration="3459000" />
+      <workItem from="1590405589635" duration="5380000" />
     </task>
     <servers />
   </component>
