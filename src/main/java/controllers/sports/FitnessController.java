@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "http://localhost:4200")
 public class FitnessController extends SportEssentials {
 
-    private ISportEssentials fitnessLogic;
+    private Fitness fitnessLogic;
 
     @Autowired
-    public FitnessController(ISportEssentials fitnessLogic) {
+    public FitnessController(Fitness fitnessLogic) {
         setRepository(fitnessLogic);
         this.fitnessLogic = fitnessLogic;
     }

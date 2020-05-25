@@ -1,9 +1,6 @@
 package domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
@@ -23,8 +20,13 @@ public class Sport implements ISportEssentials{
     @Column(name = "description")
     private String description;
 
+    @Transient
     private long sportedTime;
+
+    @Transient
     private Timestamp startedSport;
+
+    @Transient
     private boolean isSporting = false;
 
     public String getDescription() {

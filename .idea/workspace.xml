@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26ff5047-8b1a-4fee-a30c-c8d10b25be35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/context/ActivityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/ActivityContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/context/SportContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/SportContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/context/SubscribedSportContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/SubscribedSportContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/context/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/UserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/context/interfaces/IUserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/interfaces/IUserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportEssentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/ExerciseLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/FitnessLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/ISportLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/ISportEssentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/SportLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/UserLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/objects/ActivityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/objects/ExerciseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/objects/FitnessDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Fitness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/objects/SportDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Sport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/objects/SubscribedSportDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/SubscribedSport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/objects/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/logic/FitnessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/logic/FitnessTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/logic/SportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/logic/SportTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/logic/UserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/SwaggerConfig.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +43,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../backend-opencareconnect" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
@@ -87,6 +57,11 @@
       <recent name="objects" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -99,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.logic in fitbuddy-rest">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="All in fitbuddy-rest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fitbuddy-rest" />
       <option name="PACKAGE_NAME" value="" />
@@ -232,6 +207,11 @@
       <workItem from="1588799398771" duration="54000" />
       <workItem from="1589066509647" duration="676000" />
       <workItem from="1589196175756" duration="5780000" />
+      <workItem from="1589362469303" duration="18000" />
+      <workItem from="1589802308043" duration="1955000" />
+      <workItem from="1589874766179" duration="10000" />
+      <workItem from="1589875435525" duration="85000" />
+      <workItem from="1590405589635" duration="3459000" />
     </task>
     <servers />
   </component>

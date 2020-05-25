@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Component
 public class Fitness extends Sport {
 
     private List<Exercise> scheme = new ArrayList<>();
