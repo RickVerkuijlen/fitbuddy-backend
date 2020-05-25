@@ -1,2 +1,4 @@
+[![CircleCI](https://circleci.com/gh/RickVerkuijlen/fitbuddy-backend.svg?style=svg)](https://circleci.com/gh/RickVerkuijlen/fitbuddy-backend)
+
 # Fitbuddy
-This is the backend of the fitness app Fitbuddy. Writen in Java and the Spring framework
+API for the Angular fitness app called Fitbuddy. This API is written using Spring Boot and Hibernate. Everything is stored in a MySQL database. My continuous integration system is CircleCI.
