@@ -1,15 +1,17 @@
 package domain;
 
+import org.springframework.hateoas.ResourceSupport;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "sport")
-public class Sport implements ISportEssentials{
+public class Sport extends ResourceSupport implements ISportEssentials {
 
     @Id
     @Column(name = "id")
-    private int id;
+    private int sportId;
 
     @Column(name = "name")
     private String name;
@@ -37,12 +39,12 @@ public class Sport implements ISportEssentials{
         this.description = description;
     }
 
-    public int getId() {
-        return id;
+    public int getSportId() {
+        return sportId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void getSportId(int id) {
+        this.sportId = id;
     }
 
     public String getName() {

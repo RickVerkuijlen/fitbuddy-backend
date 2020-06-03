@@ -12,10 +12,6 @@ import java.util.List;
 
 @Component
 public class UserContext extends CrudOperations<User> implements IUserContext {
-    @Override
-    public List<User> getAllUsers() {
-        return null;
-    }
 
     @Override
     public User getUserById(String id) {

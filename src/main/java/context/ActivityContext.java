@@ -4,6 +4,8 @@ import context.interfaces.CrudOperations;
 import domain.Activity;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import util.HibernateInitialize;
 
@@ -13,6 +15,8 @@ import java.util.List;
 @Component
 public class ActivityContext extends CrudOperations<Activity> {
 
+    private static final Logger log = LoggerFactory.getLogger(ActivityContext.class);
+
     public List<Activity> getAllActivitiesFromUser(String uid) {
         List<Activity> result = new ArrayList<>();
         try (Session session = HibernateInitialize.getSessionFactory().openSession()) {
@@ -20,7 +24,7 @@ public class ActivityContext extends CrudOperations<Activity> {
             query.setParameter("user_id", uid);
             result = query.getResultList();
         } catch (Exception e) {
-            System.out.println(e);
+            log.error(e.toString());
         }
         return result;
     }

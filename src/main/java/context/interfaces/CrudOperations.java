@@ -2,9 +2,13 @@ package context.interfaces;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.slf4j.LoggerFactory;
 import util.HibernateInitialize;
+import org.slf4j.Logger;
 
 public abstract class CrudOperations<T> implements IContext<T> {
+
+    private static final Logger log = LoggerFactory.getLogger(CrudOperations.class);
     @Override
     public final boolean create(T entity) {
         Transaction transaction = null;
@@ -17,7 +21,7 @@ public abstract class CrudOperations<T> implements IContext<T> {
 
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.toString());
             if (transaction != null) {
                 transaction.rollback();
             }
@@ -41,6 +45,7 @@ public abstract class CrudOperations<T> implements IContext<T> {
             transaction.commit();
             return true;
         } catch (Exception e) {
+            log.error(e.toString());
             if(transaction != null) {
                 transaction.rollback();
             }

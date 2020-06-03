@@ -38,7 +38,7 @@ public class Application {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Fitbuddy Spring Restfull API")
                 .description("API for the Angular fitness app called Fitbuddy. This API is written using Spring Boot and Hibernate. Everything is stored in a MySQL database. My continuous integration system is CircleCI.")
-                .contact(new Contact("Rick Verkuijlen", "www.rickverkuijlen.nl", "rickverkuijlen@hotmail.nl"))
+                .contact(new Contact("Rick Verkuijlen", "http://www.rickverkuijlen.nl", "rickverkuijlen@hotmail.nl"))
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .version("1.0.0")

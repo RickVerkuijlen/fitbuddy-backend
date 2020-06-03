@@ -11,6 +11,8 @@ import java.util.List;
 @Component
 public class SportContext {
 
+
+
     public Sport getSportById(int id) {
         Sport result = null;
         try (Session session = HibernateInitialize.getSessionFactory().openSession()) {

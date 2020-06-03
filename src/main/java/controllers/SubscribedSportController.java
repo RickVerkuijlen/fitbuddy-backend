@@ -3,6 +3,8 @@ package controllers;
 import firebase.FirebaseSecurity;
 import domain.SubscribedSport;
 import io.swagger.annotations.Api;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -20,6 +22,8 @@ public class SubscribedSportController {
 
     private SubscribedSportRepository subscribedSportRepository;
 
+    private static final Logger log = LoggerFactory.getLogger(SubscribedSportController.class);
+
     @Autowired
     public SubscribedSportController(SubscribedSportRepository subscribedSportRepository) {
         this.subscribedSportRepository = subscribedSportRepository;
@@ -28,14 +32,14 @@ public class SubscribedSportController {
     @GetMapping(value = "/{uid}", produces = "application/json")
     public @ResponseBody
     HttpEntity<SubscribedSport> getSubscribedSportsFromUserByUid(@PathVariable String uid) {
-        System.out.println("[" + LocalDateTime.now() + "] getSubscribedSportsFromUserByUid");
+        log.info("getSubscribedSportsFromUserByUid");
         return new ResponseEntity<>(subscribedSportRepository.getSubscribedSportsFromUserByUid(uid), HttpStatus.OK);
     }
 
     @FirebaseSecurity
     @PostMapping(value = "/subscribe", consumes = "application/json", produces = "application/json")
     public HttpEntity<Object> subscribeToSport(@RequestBody SubscribedSport subscribedSport) {
-        System.out.println("[" + LocalDateTime.now() + "] subscribeToSport");
+        log.info("subscribeToSport");
 
         boolean subscriptionSuccess = subscribedSportRepository.subscribeUserToSport(subscribedSport);
 
@@ -49,7 +53,7 @@ public class SubscribedSportController {
     @DeleteMapping(value = "/unsubscribe/{userId}/{sportId}")
     public HttpEntity<Object> unsubscribeFromSport(@PathVariable("userId") String userId,
                                                    @PathVariable("sportId") int sportId) {
-        System.out.println("[" + LocalDateTime.now() + "] unsubscribeFromSport");
+        log.info("unsubscribeFromSport");
 
         SubscribedSport dto = new SubscribedSport();
         dto.setUserUid(userId);

@@ -4,6 +4,8 @@ import firebase.FirebaseSecurity;
 import domain.Activity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,8 @@ public class ActivityController {
 
     private ActivityRepository activityRepository;
 
+    private static final Logger log = LoggerFactory.getLogger(ActivityController.class);
+
     @Autowired
     public ActivityController(ActivityRepository activityRepository) {
         this.activityRepository = activityRepository;
@@ -30,7 +34,7 @@ public class ActivityController {
     @GetMapping(value = "/user/{uid}", produces = "application/json")
     public @ResponseBody
     HttpEntity<List<Activity>> getAllActivitiesFromUser(@PathVariable String uid) {
-        System.out.println("[" + LocalDateTime.now() + "] getAllActivitiesFromUser");
+        log.info("getAllActivitiesFromUser");
 
         return new ResponseEntity<>(activityRepository.getAllActivitiesFromUser(uid), HttpStatus.OK);
     }
@@ -38,7 +42,7 @@ public class ActivityController {
     @GetMapping(value = "/{id}", produces = "application/json")
     public @ResponseBody
     HttpEntity<Activity> getActivityById(@PathVariable String id) {
-        System.out.println("[" + LocalDateTime.now() + "] getActivityById");
+        log.info("getActivityById");
         return new ResponseEntity<>(activityRepository.getActivityById(id), HttpStatus.OK);
     }
 
@@ -46,8 +50,7 @@ public class ActivityController {
     @PostMapping(consumes = "application/json", produces = "application/json")
     public @ResponseBody
     HttpEntity<Boolean> postActivity(@RequestBody Activity activity) {
-        System.out.println("[" + LocalDateTime.now() + "] postActivity");
-        System.out.println(activity);
+        log.info("postActivity");
         boolean userCreationSuccess = activityRepository.createActivity(activity);
 
         if(userCreationSuccess) {
