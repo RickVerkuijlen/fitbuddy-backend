@@ -8,8 +8,6 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import util.HibernateInitialize;
 
-import java.util.List;
-
 @Component
 public class UserContext extends CrudOperations<User> implements IUserContext {
 

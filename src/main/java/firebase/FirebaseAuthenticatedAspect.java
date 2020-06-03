@@ -1,17 +1,15 @@
 package firebase;
 
-import com.google.firebase.auth.FirebaseAuthException;
-import firebase.FirebaseSecurityProvider;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 @Aspect
 @Component

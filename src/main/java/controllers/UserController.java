@@ -1,9 +1,8 @@
 package controllers;
 
-import firebase.FirebaseSecurity;
 import domain.User;
+import firebase.FirebaseSecurity;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.SwaggerDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,6 @@
 package domain;
 
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.Entity;
 import java.util.ArrayList;

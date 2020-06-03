@@ -6,8 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class FirebaseSecurityProvider {
-
-
     private static final Logger log = LoggerFactory.getLogger(FirebaseSecurityProvider.class);
 
     public void authenticateToken(String firebaseTokenId) {

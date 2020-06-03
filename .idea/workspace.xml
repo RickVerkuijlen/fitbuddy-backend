@@ -3,10 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="26ff5047-8b1a-4fee-a30c-c8d10b25be35" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/firebase/FirebaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/firebase/FirebaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/UserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/interfaces/CrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/interfaces/CrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/interfaces/IUserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/interfaces/IUserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SubscribedSportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/FitnessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/sports/SportEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/sports/SportEssentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Fitness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/SubscribedSport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/SubscribedSport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/firebase/FirebaseAuthenticatedAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/firebase/FirebaseAuthenticatedAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/firebase/FirebaseSecurityProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/firebase/FirebaseSecurityProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/HibernateInitialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/HibernateInitialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/ActivityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SubscribedSportRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +233,7 @@
       <workItem from="1590573439052" duration="4131000" />
       <workItem from="1590610888520" duration="1184000" />
       <workItem from="1591082407192" duration="11000" />
-      <workItem from="1591179966899" duration="1655000" />
+      <workItem from="1591179966899" duration="2644000" />
     </task>
     <servers />
   </component>
@@ -246,7 +258,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/firebase/FirebaseAuthenticatedAspect.java</url>
-          <line>20</line>
+          <line>18</line>
           <properties class="firebase.FirebaseAuthenticatedAspect" method="log">
             <option name="EMULATED" value="true" />
           </properties>
