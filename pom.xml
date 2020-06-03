@@ -116,6 +116,16 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/*Controller.java</exclude>
+                        <exclude>**/*Essentials.java</exclude>
+                        <exclude>**/*Context.java</exclude>
+                        <exclude>**/*Operations.java</exclude>
+                        <exclude>**/*Repository.java</exclude>
+                        <exclude>**/*Firebase?.java</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>

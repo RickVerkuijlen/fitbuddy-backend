@@ -5,10 +5,14 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HibernateInitialize {
     private static StandardServiceRegistry registry;
     private static SessionFactory sessionFactory;
+
+    private static final Logger log = LoggerFactory.getLogger(HibernateInitialize.class);
 
     public static SessionFactory getSessionFactory() {
         if(sessionFactory == null) {
@@ -21,7 +25,7 @@ public class HibernateInitialize {
 
                 sessionFactory = metadata.getSessionFactoryBuilder().build();
             } catch (Exception e) {
-                e.printStackTrace();
+                log.error(e.toString());
                 if(registry != null) {
                     StandardServiceRegistryBuilder.destroy(registry);
                 }
